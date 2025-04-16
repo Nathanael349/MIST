@@ -87,9 +87,9 @@ public class LibraryUtils {
 
       if (arch != LibUtils.ArchType.X86_64) {
         if (!GraphicsEnvironment.isHeadless())
-          JOptionPane.showMessageDialog(null, "Warning: 32-bit architecture detected.\n"
-                  + "Unable to use FFTW or CUDA, " + "please upgrade to 64-bit if possible.\n"
-                  + "Due to memory limits, saving large images may fail.", "32-bit Detected",
+          JOptionPane.showMessageDialog(null, "Warning: Your architecture is not supported. We currently only support X86_64.\n"
+                  + "Unable to use FFTW or CUDA, " + "please change to system with x86_64 architecture if possible.\n"
+                  + "Due to memory limits, saving large images may fail.", "Invalid Architecture",
               JOptionPane.WARNING_MESSAGE);
       }
 
