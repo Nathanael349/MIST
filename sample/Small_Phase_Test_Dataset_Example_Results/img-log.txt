@@ -1,0 +1,27 @@
+Launching MIST
+Checking args for stitching:
+Could not find file: C:\Users\mmajursk\Desktop\MIST\Small_Phase_Test_Dataset\image-tiles\img_r000_c000.tif
+Please check your image directory, file pattern, and start tile to ensure they match the files in your image directory.
+Arg check passed
+STITCHING BEGINS!
+Successfully loaded plan from file
+Loading FFTW Plan...
+Saving plan to file: C:\Fiji.app\lib\fftw\fftPlans\1392x1040MeasurePlan_f.dat
+Finished loading/saving FFTW plan. Commencing stitching.
+memory pool size: 31
+Writing relative positions (no optimization) to: C:\Users\mmajursk\Desktop\MIST\Small_Phase_Test_Dataset_Example_Results\img-relative-positions-no-optimization-0.txt
+Computed North overlap: 18.0%
+Computed West overlap: 19.0%
+Repeatability for North: 6 pixels
+Repeatability for West: 2 pixels
+Calculated Repeatability: 13 pixels
+Completed Stitching in 9790ms
+Writing global positions to: C:\Users\mmajursk\Desktop\MIST\Small_Phase_Test_Dataset_Example_Results\img-global-positions-0.txt
+Writing relative positions to: C:\Users\mmajursk\Desktop\MIST\Small_Phase_Test_Dataset_Example_Results\img-relative-positions-0.txt
+Writing relative positions (no optimization) to: C:\Users\mmajursk\Desktop\MIST\Small_Phase_Test_Dataset_Example_Results\img-relative-positions-no-optimization-0.txt
+Writing full image to: C:\Users\mmajursk\Desktop\MIST\Small_Phase_Test_Dataset_Example_Results\img-stitched-0.tif  Width: 5937 Height: 4453
+Saving tiles to file: C:\Users\mmajursk\Desktop\MIST\Small_Phase_Test_Dataset_Example_Results\img-stitched-0.tif
+Finished saving full image: C:\Users\mmajursk\Desktop\MIST\Small_Phase_Test_Dataset_Example_Results\img-stitched-0.tif
+Completed output options for slice 0.
+Saving Statistics to "C:\Users\mmajursk\Desktop\MIST\Small_Phase_Test_Dataset_Example_Results\img-statistics.txt"
+Saving Log to "C:\Users\mmajursk\Desktop\MIST\Small_Phase_Test_Dataset_Example_Results\img-log.txt"

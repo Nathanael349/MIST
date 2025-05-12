@@ -1,0 +1,88 @@
+System information:
+Java Version: 1.8.0_111
+Operating System: Windows 7 amd64 v6.1
+CPU threads used: 24
+Free memory available to JVM (GB): 1
+Total memory available to JVM (GB): 1
+Max memory for JVM (GB): 62
+Execution type: Auto
+
+Execution timing and general information:
+Statistics Output Version: 1.0
+
+Total time for experiment (ms): 8645
+Total Stitching Time (ms): 7016
+Relative Displacement Time (ms): 6689
+Global Optimization Time (ms): 288
+Stage Model Build Time (ms): 160
+Global Position Time (ms): 0
+Output Full Image Time (ms): 1112
+Running sequential version (LOW MEMORY): false
+Keep all pixel data in memory: true
+
+North repeatability: 4
+North overlap: 19.0
+North valid tiles after filter: 8 out of 20 (40%)
+North min filter threshold: 811.2
+North max filter threshold: 873.6
+North missing row/col: []
+North percentage missing row/col: 0%
+
+West repeatability: 1
+West overlap: 19.0
+West valid tiles after filter: 9 out of 20 (45%)
+West min filter threshold: 1085.76
+West max filter threshold: 1169.28
+West missing row/col: []
+West percentage missing row/col: 0%
+
+Error report: PASSED
+
+Stitching Run-time parameters:
+gridWidth: 5
+gridHeight: 5
+startTile: 1
+imageDir: C:\Users\mmajursk\Desktop\MIST\Small_Fluorescent_Test_Dataset\image-tiles\
+filenamePattern: img_r{rrr}_c{ccc}.tif
+filenamePatternType: ROWCOL
+gridOrigin: UL
+numberingPattern: HORIZONTALCOMBING
+assembleFromMetadata: false
+globalPositionsFile: 
+startRow: 0
+startCol: 0
+extentWidth: 5
+extentHeight: 5
+timeSlices: 0
+isTimeSlicesEnabled: false
+isSuppressSubGridWarningEnabled: false
+outputPath: C:\Users\mmajursk\Desktop\MIST\Small_Fluorescent_Test_Dataset_Example_Results
+displayStitching: false
+outputFullImage: true
+outputMeta: true
+outputImgPyramid: false
+blendingMode: OVERLAY
+blendingAlpha: NaN
+outFilePrefix: img-
+programType: AUTO
+numCPUThreads: 24
+loadFFTWPlan: true
+saveFFTWPlan: true
+fftwPlanType: MEASURE
+fftwLibraryName: libfftw3f
+fftwLibraryFilename: libfftw3f.dll
+planPath: C:\Fiji.app\lib\fftw\fftPlans
+fftwLibraryPath: C:\Fiji.app\lib\fftw
+stageRepeatability: 0
+horizontalOverlap: NaN
+verticalOverlap: NaN
+numFFTPeaks: 0
+overlapUncertainty: NaN
+isUseDoublePrecision: false
+isUseBioFormats: false
+isEnableCudaExceptions: false
+translationRefinementMethod: SINGLE_HILL_CLIMB
+numTranslationRefinementStartPoints: 16
+headless: false
+logLevel: MANDATORY
+debugLevel: NONE

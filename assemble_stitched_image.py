@@ -72,6 +72,10 @@ def assemble_image(global_positions_filepath, images_dirpath, output_filepath):
         if tile.dtype != first_tile.dtype:
             raise RuntimeError('Img {} has type: {}, expected {}.'.format(fn, tile.dtype, first_tile.dtype))
 
+        # Fix: expand dims if grayscale
+        if len(tile.shape) == 2:
+            tile = np.expand_dims(tile, axis=2)
+
         stitched_img[y:y+tile_h, x:x+tile_w, :] = tile
 
     print('Saving stitched image to disk')

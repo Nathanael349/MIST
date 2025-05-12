@@ -1,5 +1,5 @@
-FROM nvidia/cuda:9.0-runtime-ubuntu16.04
-MAINTAINER National Institute of Standards and Technology
+FROM nvidia/cuda:11.8.0-runtime-ubuntu22.04
+LABEL maintainer="National Institute of Standards and Technology"
 
 ARG EXEC_DIR="/opt/executables"
 ARG DATA_DIR="/data"
