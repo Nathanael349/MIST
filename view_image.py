@@ -2,15 +2,24 @@ import numpy as np
 import matplotlib.pyplot as plt
 import skimage.io
 
-# Read both images
+# Read images
 fluorescent_img = skimage.io.imread('sample/Small_Fluorescent_Test_Dataset/outputs/stitched_image.tif')
 phase_img = skimage.io.imread('sample/Small_Phase_Test_Dataset/outputs/stitched_image.tif')
+cmu_img = skimage.io.imread('sample/SampleData_CMUrun2_TIF/outputs/stitched_image.tif')
+cmu_no_overlap_img = skimage.io.imread('sample/SampleData_CMUrun2_TIF/outputs_no_overlap/stitched_image.tif')
+cmu_from_config_img = skimage.io.imread('sample/SampleData_CMUrun2_TIF/outputs_from_config/stitched_image.tif')
 
 # Remove the extra dimension if it exists
 if len(fluorescent_img.shape) == 3 and fluorescent_img.shape[2] == 1:
     fluorescent_img = fluorescent_img.squeeze()
 if len(phase_img.shape) == 3 and phase_img.shape[2] == 1:
     phase_img = phase_img.squeeze()
+if len(cmu_img.shape) == 3 and cmu_img.shape[2] == 1:
+    cmu_img = cmu_img.squeeze()
+if len(cmu_no_overlap_img.shape) == 3 and cmu_no_overlap_img.shape[2] == 1:
+    cmu_no_overlap_img = cmu_no_overlap_img.squeeze()
+if len(cmu_from_config_img.shape) == 3 and cmu_from_config_img.shape[2] == 1:
+    cmu_from_config_img = cmu_from_config_img.squeeze()
 
 # Create figure and axes
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(15, 7))
@@ -27,9 +36,18 @@ def update_display(image_type):
     if image_type == 'fluorescent':
         img = fluorescent_img
         title = 'Fluorescent Image'
-    else:
+    elif image_type == 'phase':
         img = phase_img
         title = 'Phase Image'
+    elif image_type == 'cmu':
+        img = cmu_img
+        title = 'CMU Dataset (Original)'
+    elif image_type == 'cmu_no_overlap':
+        img = cmu_no_overlap_img
+        title = 'CMU Dataset (No Overlap)'
+    else:  # cmu_from_config
+        img = cmu_from_config_img
+        title = 'CMU Dataset (From Config)'
     
     # Display original image
     im1 = ax1.imshow(img, cmap='gray')
@@ -49,12 +67,18 @@ def update_display(image_type):
 from matplotlib.widgets import Button
 
 # Create axes for buttons
-ax_button1 = plt.axes([0.2, 0.01, 0.2, 0.05])
-ax_button2 = plt.axes([0.6, 0.01, 0.2, 0.05])
+ax_button1 = plt.axes([0.1, 0.01, 0.15, 0.05])
+ax_button2 = plt.axes([0.27, 0.01, 0.15, 0.05])
+ax_button3 = plt.axes([0.44, 0.01, 0.15, 0.05])
+ax_button4 = plt.axes([0.61, 0.01, 0.15, 0.05])
+ax_button5 = plt.axes([0.78, 0.01, 0.15, 0.05])
 
 # Create buttons
-button1 = Button(ax_button1, 'Show Fluorescent')
-button2 = Button(ax_button2, 'Show Phase')
+button1 = Button(ax_button1, 'Fluorescent')
+button2 = Button(ax_button2, 'Phase')
+button3 = Button(ax_button3, 'CMU Original')
+button4 = Button(ax_button4, 'CMU No Overlap')
+button5 = Button(ax_button5, 'CMU From Config')
 
 # Button callbacks
 def show_fluorescent(event):
@@ -63,9 +87,21 @@ def show_fluorescent(event):
 def show_phase(event):
     update_display('phase')
 
+def show_cmu(event):
+    update_display('cmu')
+
+def show_cmu_no_overlap(event):
+    update_display('cmu_no_overlap')
+
+def show_cmu_from_config(event):
+    update_display('cmu_from_config')
+
 button1.on_clicked(show_fluorescent)
 button2.on_clicked(show_phase)
+button3.on_clicked(show_cmu)
+button4.on_clicked(show_cmu_no_overlap)
+button5.on_clicked(show_cmu_from_config)
 
-# Show fluorescent image by default
-update_display('fluorescent')
+# Show CMU from config image by default
+update_display('cmu_from_config')
 plt.show() 

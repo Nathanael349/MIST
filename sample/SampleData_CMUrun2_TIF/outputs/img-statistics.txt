@@ -1,0 +1,87 @@
+System information:
+Java Version: 1.8.0_452
+Operating System: Linux amd64 v6.10.14-linuxkit
+CPU threads used: 20
+Free memory available to JVM (GB): 0
+Total memory available to JVM (GB): 0
+Max memory for JVM (GB): 0
+Execution type: JAVA
+
+Execution timing and general information:
+Statistics Output Version: 1.0
+
+Total time for experiment (ms): 427
+Total Stitching Time (ms): 319
+Relative Displacement Time (ms): 276
+Global Optimization Time (ms): 43
+Stage Model Build Time (ms): 34
+Global Position Time (ms): 0
+Running sequential version (LOW MEMORY): false
+Keep all pixel data in memory: true
+
+North repeatability: 0
+North overlap: 78.0
+North min filter threshold: 61.879999999999995
+North max filter threshold: 98.27999999999997
+
+West repeatability: 0
+West overlap: 76.0
+West min filter threshold: 0.5699999999999998
+West max filter threshold: 0.8700000000000001
+
+Error report: PASSED
+
+Stitching Run-time parameters:
+gridWidth: 4
+gridHeight: 5
+startTileRow: 0
+startTileCol: 0
+imageDir: /data/SampleData_CMUrun2_TIF
+filenamePattern: img_r{rrr}_c{ccc}.tif
+filenamePatternType: ROWCOL
+gridOrigin: UL
+numberingPattern: HORIZONTALCOMBING
+assembleFromMetadata: false
+assembleNoOverlap: false
+globalPositionsFile: 
+startRow: 0
+startCol: 0
+extentWidth: 4
+extentHeight: 5
+timeSlices: 1
+isTimeSlicesEnabled: false
+outputPath: /data/SampleData_CMUrun2_TIF/outputs
+displayStitching: false
+outputFullImage: false
+outputMeta: true
+outputImgPyramid: false
+blendingMode: OVERLAY
+blendingAlpha: NaN
+compressionMode: UNCOMPRESSED
+outFilePrefix: img-
+unit: MICROMETER
+unitX: 1.0
+unitY: 1.0
+programType: JAVA
+numCPUThreads: 20
+loadFFTWPlan: true
+saveFFTWPlan: true
+fftwPlanType: MEASURE
+fftwLibraryName: libfftw3
+fftwLibraryFilename: libfftw3.dll
+planPath: /opt/executables/lib/fftw/fftPlans
+fftwLibraryPath: /opt/executables/lib/fftw
+stageRepeatability: 0
+horizontalOverlap: NaN
+verticalOverlap: NaN
+numFFTPeaks: 0
+overlapUncertainty: 5.0
+isUseDoublePrecision: false
+isUseBioFormats: false
+isSuppressModelWarningDialog: false
+isEnableCudaExceptions: false
+translationRefinementMethod: SINGLE_HILL_CLIMB
+numTranslationRefinementStartPoints: 16
+headless: false
+logLevel: MANDATORY
+debugLevel: NONE
