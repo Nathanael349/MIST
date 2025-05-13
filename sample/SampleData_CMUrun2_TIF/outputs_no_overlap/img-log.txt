@@ -1,3 +1,0 @@
-IJ Log string was null. 
-
-This is likely due to the stitching being run in Headless mode.
